@@ -1,0 +1,17 @@
+
+.owl-theme .owl-controls .owl-buttons div {
+    color: #000;
+    padding: 3px 20px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    background: #ffffff;
+    opacity: 0.5;
+    font-size: 16px;
+}
+
+.equal {
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+}
