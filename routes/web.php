@@ -13,7 +13,7 @@ Route::get('supplier-approval/{id}','AdminDashboardController@update');
 Route::get('/root/dashboard','AdminDashboardController@index');
 
 
-// Product (sumon)
+// Product (Tomal)
 //Route::prefix('product')->group(function () {
     Route::get('/product-create', 'ProductController@create');
     Route::post('/product-store', 'ProductController@store');
@@ -24,13 +24,13 @@ Route::get('/root/dashboard','AdminDashboardController@index');
     Route::post('/product-destroy/{id}', 'ProductController@destroy');
 //}
 
-// Category (sumon)
+// Category (Tomal)
 Route::get('/category-view', 'CategoryController@index');
 Route::get('/category-create', 'CategoryController@create');
 Route::post('/category-store', 'CategoryController@store');
 Route::post('/category-delete/{id}', 'CategoryController@destroy');
 
-//Orders (sumon)
+//Orders (Tomal)
 // get all pending order using status 0
 Route::get('/orders-pending', 'OrderController@orders_pending');
 // get all delivered order using status 1
@@ -67,8 +67,8 @@ Route::patch('/brand-update/{id}', 'brandsController@update');
 Route::delete('/brands-destroy/{id}','brandsController@destroy');
 
 
-//Front Area (sumon)
-// Product (sumon)
+//Front Area (Tomal)
+// Product (Tomal)
 Route::get('product', 'FrontProductController@all_product');
 
 // single view product
@@ -81,7 +81,7 @@ Route::get('/brand/products/{id}', 'FrontProductController@brand_products');
 
 
 
-// Cart (sumon)
+// Cart (Tomal)
 Route::get('/cart', 'CartController@index');
 Route::get('/cart/addtocart/{id}', 'CartController@addtocart');
 Route::get('/cart-update/{id}', 'CartController@update');
@@ -94,7 +94,7 @@ Route::get('cart/singlePage/addtocart/{id}', 'CartController@SinglePageAddtoCart
 Route::post('address-store','AddressController@store');
 
 
-//Checkout (sumon)
+//Checkout (Tomal)
 
 Route::get('/checkout','AddressController@checkout');
 
@@ -125,7 +125,7 @@ Route::get('frontsupplierindex','frontEndSupplierControlle@index')->name('fronts
 Route::get('supplierlogout','Auth\FrontSupplierLoginController@logout')->name('supplierlogout');
 Route::get('getUpdateForm','frontEndSupplierControlle@getUpdateForm')->name('getUpdateForm');
 Route::post('supplier_update_store','supplier@update')->name('supplier_update_store');
-// Supplier Dashboard Control (sumon)
+// Supplier Dashboard Control (Tomal)
 Route::get('/supplier/product/create', 'frontEndSupplierControlle@productCreate');
 Route::post('/supplier/product/store', 'frontEndSupplierControlle@productStore');
 Route::get('/supplier/product/edit/{id}', 'frontEndSupplierControlle@productEdit');
